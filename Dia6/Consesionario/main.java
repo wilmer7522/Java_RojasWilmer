@@ -10,4 +10,13 @@ package Consesionario;
  */
 public class main {
     
+    public static void main(String[] args) {
+        Coche c1 = new Coche(4,"camioneta", "1300","suzuki","gand Vitara" );
+        Motocicleta m1 = new Motocicleta(" Doble Prposito ", 200, " AKT ", " TT DS ");
+        
+        c1.tieneBaul();
+        m1.mostrarDetalles();
+        
+        
+    }
 }

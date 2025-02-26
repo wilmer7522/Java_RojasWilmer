@@ -8,35 +8,38 @@ package Consesionario;
  *
  * @author wilmer
  */
-public class Motocicleta extends Vehiculos{
-    
+public class Motocicleta extends Vehiculos {
+
     private String estilo;
-    private String cilindraje;
+    private int cilindraje;
+
 
     public Motocicleta() {
     }
 
+    public Motocicleta(String marca) {
+        super(marca); // Llama al constructor de la clase padre
+    }
+
     public Motocicleta(String marca, String modelo) {
-        super(marca, modelo);
+        super(marca, modelo); // Llama al constructor de la clase padre
     }
 
-    public Motocicleta(String estilo, String cilindraje) {
+    public Motocicleta(String estilo, int cilindraje) {
         this.estilo = estilo;
         this.cilindraje = cilindraje;
     }
 
-    public Motocicleta(String estilo, String cilindraje, String marca, String modelo) {
-        super(marca, modelo);
+    public Motocicleta(String estilo, int cilindraje, String marca, String modelo) {
+        super(marca, modelo); // Llama al constructor de la clase padre
         this.estilo = estilo;
         this.cilindraje = cilindraje;
     }
-    
-    
-  
 
-    
-    
-    
-    
+    @Override
+    public void mostrarDetalles() {
+        System.out.println(getMarca() + getModelo() + cilindraje + estilo);
+                }         
+   
     
 }
